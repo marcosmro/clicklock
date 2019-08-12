@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let runningApps = NSWorkspace.shared.runningApplications
         let isRunning = runningApps.contains {
-            $0.bundleIdentifier == "your.domain.TestAutoLaunch"
+            $0.bundleIdentifier == "com.marcosmr.ClickLock"
         }
         
         if !isRunning {

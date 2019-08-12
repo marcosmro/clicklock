@@ -7,12 +7,16 @@
 //
 
 import Cocoa
+import ServiceManagement
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
     let menu = NSMenu();
+    
+    let helperBundleName = "com.marcosmr.AutoLaunchHelper"
+    
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let button = statusItem.button {
@@ -23,10 +27,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         // Construct menu
-        menu.addItem(NSMenuItem(title: "Launch on system startup", action: #selector(NSApplication.terminate(_:)), keyEquivalent: ""))
+        let itemLaunch = NSMenuItem(title: "Launch on system startup", action: #selector(toggleItemState(_:)), keyEquivalent: "")
+        // Enable or disable the auto launch check depending on the system configuration
+        let foundHelper = NSWorkspace.shared.runningApplications.contains {
+            $0.bundleIdentifier == helperBundleName
+        }
+        if (foundHelper) {
+            itemLaunch.state = NSControl.StateValue.on
+        }
+        else {
+            itemLaunch.state = NSControl.StateValue.off
+        }
+        menu.addItem(itemLaunch)
+        
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "About ClickLock", action: #selector(NSApplication.terminate(_:)), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: "Quit ClickLock", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        
+        
+        
+    
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -62,6 +82,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let posY = CGFloat(integerLiteral: Int(rectangle?.minY ?? 0) - 5)
             let point = NSPoint(x: posX, y:posY)
             menu.popUp(positioning: nil, at: point, in: nil)
+        }
+    }
+    
+    @objc func toggleItemState(_ sender: NSMenuItem) {
+        if (sender.state == NSControl.StateValue.on) {
+            sender.state = NSControl.StateValue.off
+            SMLoginItemSetEnabled(helperBundleName as CFString, false)
+        }
+        else {
+            sender.state = NSControl.StateValue.on
+            SMLoginItemSetEnabled(helperBundleName as CFString, true)
         }
     }
 }
