@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062C281D23010C6F00015A8B /* HelperAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062C281C23010C6F00015A8B /* HelperAppDelegate.swift */; };
+		062C282123010C7000015A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062C282023010C7000015A8B /* Assets.xcassets */; };
+		062C282423010C7000015A8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062C282223010C7000015A8B /* Main.storyboard */; };
 		0633730322FBEC1E000DDA7B /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0633730222FBEC1E000DDA7B /* LockViewController.swift */; };
 		06F1FC8022FBDA6E00909719 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F1FC7F22FBDA6E00909719 /* AppDelegate.swift */; };
 		06F1FC8222FBDA6E00909719 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F1FC8122FBDA6E00909719 /* ViewController.swift */; };
@@ -16,18 +19,39 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		062C280823010C1E00015A8B /* AutoLaunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLaunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		062C281A23010C6F00015A8B /* AutoLaunchHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLaunchHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		062C281C23010C6F00015A8B /* HelperAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperAppDelegate.swift; sourceTree = "<group>"; };
+		062C282023010C7000015A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		062C282323010C7000015A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		062C282523010C7000015A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		062C282623010C7000015A8B /* AutoLaunchHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoLaunchHelper.entitlements; sourceTree = "<group>"; };
 		0633730222FBEC1E000DDA7B /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
-		06F1FC7C22FBDA6E00909719 /* Quick Screen Locker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quick Screen Locker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F1FC7C22FBDA6E00909719 /* ClickLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClickLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F1FC7F22FBDA6E00909719 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06F1FC8122FBDA6E00909719 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		06F1FC8322FBDA7600909719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06F1FC8622FBDA7600909719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06F1FC8822FBDA7600909719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		06F1FC8922FBDA7600909719 /* Quick_Screen_Locker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quick_Screen_Locker.entitlements; sourceTree = "<group>"; };
+		06F1FC8922FBDA7600909719 /* ClickLock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClickLock.entitlements; sourceTree = "<group>"; };
 		06F1FC8F22FBE70B00909719 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		062C280523010C1E00015A8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062C281723010C6F00015A8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		06F1FC7922FBDA6E00909719 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -38,10 +62,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		062C281B23010C6F00015A8B /* AutoLaunchHelper */ = {
+			isa = PBXGroup;
+			children = (
+				062C281C23010C6F00015A8B /* HelperAppDelegate.swift */,
+				062C282023010C7000015A8B /* Assets.xcassets */,
+				062C282223010C7000015A8B /* Main.storyboard */,
+				062C282523010C7000015A8B /* Info.plist */,
+				062C282623010C7000015A8B /* AutoLaunchHelper.entitlements */,
+			);
+			path = AutoLaunchHelper;
+			sourceTree = "<group>";
+		};
 		06F1FC7322FBDA6E00909719 = {
 			isa = PBXGroup;
 			children = (
-				06F1FC7E22FBDA6E00909719 /* Quick Screen Locker */,
+				06F1FC7E22FBDA6E00909719 /* ClickLock */,
+				062C281B23010C6F00015A8B /* AutoLaunchHelper */,
 				06F1FC7D22FBDA6E00909719 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,12 +86,14 @@
 		06F1FC7D22FBDA6E00909719 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				06F1FC7C22FBDA6E00909719 /* Quick Screen Locker.app */,
+				06F1FC7C22FBDA6E00909719 /* ClickLock.app */,
+				062C280823010C1E00015A8B /* AutoLaunch.app */,
+				062C281A23010C6F00015A8B /* AutoLaunchHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		06F1FC7E22FBDA6E00909719 /* Quick Screen Locker */ = {
+		06F1FC7E22FBDA6E00909719 /* ClickLock */ = {
 			isa = PBXGroup;
 			children = (
 				06F1FC7F22FBDA6E00909719 /* AppDelegate.swift */,
@@ -62,19 +101,53 @@
 				06F1FC8322FBDA7600909719 /* Assets.xcassets */,
 				06F1FC8522FBDA7600909719 /* Main.storyboard */,
 				06F1FC8822FBDA7600909719 /* Info.plist */,
-				06F1FC8922FBDA7600909719 /* Quick_Screen_Locker.entitlements */,
+				06F1FC8922FBDA7600909719 /* ClickLock.entitlements */,
 				06F1FC8F22FBE70B00909719 /* EventMonitor.swift */,
 				0633730222FBEC1E000DDA7B /* LockViewController.swift */,
 			);
-			path = "Quick Screen Locker";
+			path = ClickLock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		06F1FC7B22FBDA6E00909719 /* Quick Screen Locker */ = {
+		062C280723010C1E00015A8B /* AutoLaunch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 06F1FC8C22FBDA7600909719 /* Build configuration list for PBXNativeTarget "Quick Screen Locker" */;
+			buildConfigurationList = 062C281323010C2100015A8B /* Build configuration list for PBXNativeTarget "AutoLaunch" */;
+			buildPhases = (
+				062C280423010C1E00015A8B /* Sources */,
+				062C280523010C1E00015A8B /* Frameworks */,
+				062C280623010C1E00015A8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoLaunch;
+			productName = AutoLaunch;
+			productReference = 062C280823010C1E00015A8B /* AutoLaunch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		062C281923010C6F00015A8B /* AutoLaunchHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 062C282723010C7000015A8B /* Build configuration list for PBXNativeTarget "AutoLaunchHelper" */;
+			buildPhases = (
+				062C281623010C6F00015A8B /* Sources */,
+				062C281723010C6F00015A8B /* Frameworks */,
+				062C281823010C6F00015A8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoLaunchHelper;
+			productName = AutoLaunchHelper;
+			productReference = 062C281A23010C6F00015A8B /* AutoLaunchHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		06F1FC7B22FBDA6E00909719 /* ClickLock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F1FC8C22FBDA7600909719 /* Build configuration list for PBXNativeTarget "ClickLock" */;
 			buildPhases = (
 				06F1FC7822FBDA6E00909719 /* Sources */,
 				06F1FC7922FBDA6E00909719 /* Frameworks */,
@@ -84,9 +157,9 @@
 			);
 			dependencies = (
 			);
-			name = "Quick Screen Locker";
+			name = ClickLock;
 			productName = "Quick Screen Locker";
-			productReference = 06F1FC7C22FBDA6E00909719 /* Quick Screen Locker.app */;
+			productReference = 06F1FC7C22FBDA6E00909719 /* ClickLock.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,6 +172,12 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = marcosmr;
 				TargetAttributes = {
+					062C280723010C1E00015A8B = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					062C281923010C6F00015A8B = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					06F1FC7B22FBDA6E00909719 = {
 						CreatedOnToolsVersion = 10.3;
 						SystemCapabilities = {
@@ -109,7 +188,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 06F1FC7722FBDA6E00909719 /* Build configuration list for PBXProject "Quick Screen Locker" */;
+			buildConfigurationList = 06F1FC7722FBDA6E00909719 /* Build configuration list for PBXProject "ClickLock" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,12 +201,30 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				06F1FC7B22FBDA6E00909719 /* Quick Screen Locker */,
+				06F1FC7B22FBDA6E00909719 /* ClickLock */,
+				062C280723010C1E00015A8B /* AutoLaunch */,
+				062C281923010C6F00015A8B /* AutoLaunchHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		062C280623010C1E00015A8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062C281823010C6F00015A8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062C282123010C7000015A8B /* Assets.xcassets in Resources */,
+				062C282423010C7000015A8B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		06F1FC7A22FBDA6E00909719 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,6 +237,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		062C280423010C1E00015A8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		062C281623010C6F00015A8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				062C281D23010C6F00015A8B /* HelperAppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		06F1FC7822FBDA6E00909719 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -154,6 +266,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		062C282223010C7000015A8B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				062C282323010C7000015A8B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		06F1FC8522FBDA7600909719 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -165,6 +285,78 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		062C281423010C2100015A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AutoLaunch/AutoLaunch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AutoLaunch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcosmr.AutoLaunch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		062C281523010C2100015A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AutoLaunch/AutoLaunch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AutoLaunch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcosmr.AutoLaunch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		062C282823010C7000015A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AutoLaunchHelper/AutoLaunchHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AutoLaunchHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcosmr.AutoLaunchHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		062C282923010C7000015A8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AutoLaunchHelper/AutoLaunchHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AutoLaunchHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcosmr.AutoLaunchHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		06F1FC8A22FBDA7600909719 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -286,12 +478,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Quick Screen Locker/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ClickLock/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosmr.Quick-Screen-Locker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcosmr.ClickLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -303,12 +495,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Quick Screen Locker/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ClickLock/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosmr.Quick-Screen-Locker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marcosmr.ClickLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -317,7 +509,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		06F1FC7722FBDA6E00909719 /* Build configuration list for PBXProject "Quick Screen Locker" */ = {
+		062C281323010C2100015A8B /* Build configuration list for PBXNativeTarget "AutoLaunch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				062C281423010C2100015A8B /* Debug */,
+				062C281523010C2100015A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		062C282723010C7000015A8B /* Build configuration list for PBXNativeTarget "AutoLaunchHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				062C282823010C7000015A8B /* Debug */,
+				062C282923010C7000015A8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F1FC7722FBDA6E00909719 /* Build configuration list for PBXProject "ClickLock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				06F1FC8A22FBDA7600909719 /* Debug */,
@@ -326,7 +536,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		06F1FC8C22FBDA7600909719 /* Build configuration list for PBXNativeTarget "Quick Screen Locker" */ = {
+		06F1FC8C22FBDA7600909719 /* Build configuration list for PBXNativeTarget "ClickLock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				06F1FC8D22FBDA7600909719 /* Debug */,
