@@ -18,13 +18,14 @@ class AboutViewController: NSViewController {
 }
 
 extension AboutViewController {
-    // MARK: Storyboard instantiation
+    
+    // Storyboard instantiation
     static func freshController() -> AboutViewController {
-        //1.
+
         let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
-        //2.
+       
         let identifier = NSStoryboard.SceneIdentifier("AboutViewController")
-        //3.
+       
         guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? AboutViewController else {
             fatalError("Why cant i find AboutViewController? - Check Main.storyboard")
         }

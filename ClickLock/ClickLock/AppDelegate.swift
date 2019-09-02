@@ -23,10 +23,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named:NSImage.Name("LockImage"))
             button.action = #selector(statusBarButtonClicked(_:))
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])
-            button.toolTip = "Left click to lock the screen"
+            button.toolTip = "ClickLock v1.0"
         }
-        
-        // Construct menu
+        buildMenu()
+        aboutPopover.contentViewController = AboutViewController.freshController()
+    }
+    
+    func applicationWillTerminate(_ aNotification: Notification) {
+        // Insert code here to tear down your application
+    }
+    
+    func buildMenu() {
         let itemLaunch = NSMenuItem(title: "Launch on system startup", action: #selector(toggleItemState(_:)), keyEquivalent: "")
         // Enable or disable the auto launch check depending on the system configuration
         let foundHelper = NSWorkspace.shared.runningApplications.contains {
@@ -39,18 +46,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             itemLaunch.state = NSControl.StateValue.off
         }
         menu.addItem(itemLaunch)
-        
         menu.addItem(NSMenuItem.separator())
-        // TODO: release notes
         menu.addItem(NSMenuItem(title: "About ClickLock", action: #selector(showAboutPopover(_:)), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: "Quit ClickLock", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
-        
-        aboutPopover.contentViewController = AboutViewController.freshController()
-        
-    }
-    
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
     }
 
     @objc func statusBarButtonClicked(_ sender: NSStatusBarButton) {
@@ -64,8 +62,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    // Locks the screen
-    // https://github.com/ftiff/MenuLock/blob/master/MenuLock/AppDelegate.swift#L126
+    // From: https://github.com/ftiff/MenuLock/blob/master/MenuLock/AppDelegate.swift#L126
     @objc func lockScreen() {
         let libHandle = dlopen("/System/Library/PrivateFrameworks/login.framework/Versions/Current/login", RTLD_LAZY)
         let sym = dlsym(libHandle, "SACLockScreenImmediate")
@@ -98,17 +95,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func showAboutPopover(_ sender: Any?) {
         if let button = statusItem.button {
             aboutPopover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-            
             // Activate the app to be able to detect when it will resign active later (see func applicationWillResignActive below)
             NSApp.activate(ignoringOtherApps: true)
         }
     }
     
-    func closeAboutPopover(sender: Any?) {
-        aboutPopover.performClose(sender)
-    }
-    
     func applicationWillResignActive(_ notification: Notification) {
         closeAboutPopover(sender: self)
+    }
+    
+    func closeAboutPopover(sender: Any?) {
+        aboutPopover.performClose(sender)
     }
 }

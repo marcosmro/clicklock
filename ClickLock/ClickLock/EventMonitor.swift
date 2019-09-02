@@ -8,6 +8,7 @@
 
 import Cocoa
 
+// From: https://www.raywenderlich.com/450-menus-and-popovers-in-menu-bar-apps-for-macos
 public class EventMonitor {
     private var monitor: Any?
     private let mask: NSEvent.EventTypeMask

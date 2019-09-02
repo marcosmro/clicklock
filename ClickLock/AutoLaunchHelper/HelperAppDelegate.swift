@@ -11,9 +11,8 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        
         let runningApps = NSWorkspace.shared.runningApplications
         let isRunning = runningApps.contains {
             $0.bundleIdentifier == "com.marcosmr.ClickLock"
@@ -31,7 +30,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
 
 }
 
