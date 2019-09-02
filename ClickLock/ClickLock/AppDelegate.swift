@@ -14,9 +14,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
     let menu = NSMenu();
-    
+    let aboutPopover = NSPopover()
+
     let helperBundleName = "com.marcosmr.AutoLaunchHelper"
-    
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let button = statusItem.button {
@@ -41,12 +41,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(itemLaunch)
         
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "About ClickLock", action: #selector(NSApplication.terminate(_:)), keyEquivalent: ""))
+        // TODO: release notes
+        menu.addItem(NSMenuItem(title: "About ClickLock", action: #selector(showAboutPopover(_:)), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: "Quit ClickLock", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         
+        aboutPopover.contentViewController = AboutViewController.freshController()
         
-        
-    
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -57,7 +57,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let event = NSApp.currentEvent!
         
         if event.type == NSEvent.EventType.leftMouseUp { // Left click
-            print("left click")
             lockScreen()
         }
         else { // Right click
@@ -94,5 +93,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             sender.state = NSControl.StateValue.on
             SMLoginItemSetEnabled(helperBundleName as CFString, true)
         }
+    }
+
+    @objc func showAboutPopover(_ sender: Any?) {
+        if let button = statusItem.button {
+            aboutPopover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+            
+            // Activate the app to be able to detect when it will resign active later (see func applicationWillResignActive below)
+            NSApp.activate(ignoringOtherApps: true)
+        }
+    }
+    
+    func closeAboutPopover(sender: Any?) {
+        aboutPopover.performClose(sender)
+    }
+    
+    func applicationWillResignActive(_ notification: Notification) {
+        closeAboutPopover(sender: self)
     }
 }

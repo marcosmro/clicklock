@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -678,6 +679,53 @@
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="lUN-mb-vuG">
+            <objects>
+                <viewController storyboardIdentifier="AboutViewController" id="xSq-jw-fg3" customClass="AboutViewController" customModule="ClickLock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="GXW-Ew-EsX">
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="155"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3k4-O2-jXd">
+                                <rect key="frame" x="130" y="56" width="70" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Version 1.0" id="4UR-lv-a44">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NNg-x0-NLa">
+                                <rect key="frame" x="112" y="81" width="103" height="29"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="ClickLock" id="SaD-6X-Vig">
+                                    <font key="font" metaFont="system" size="24"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dkg-PZ-9fr">
+                                <rect key="frame" x="80" y="9" width="168" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Copyright © 2019 MarcosMR" id="yxw-hU-Din">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="3k4-O2-jXd" firstAttribute="top" secondItem="NNg-x0-NLa" secondAttribute="bottom" constant="8" symbolic="YES" id="1bp-cY-wwJ"/>
+                            <constraint firstAttribute="trailing" secondItem="3k4-O2-jXd" secondAttribute="trailing" constant="128" id="BBy-k2-BUT"/>
+                            <constraint firstItem="NNg-x0-NLa" firstAttribute="top" secondItem="GXW-Ew-EsX" secondAttribute="top" constant="45" id="F55-TH-KEX"/>
+                            <constraint firstItem="NNg-x0-NLa" firstAttribute="centerX" secondItem="dkg-PZ-9fr" secondAttribute="centerX" id="Inp-k2-iZB"/>
+                            <constraint firstItem="dkg-PZ-9fr" firstAttribute="top" secondItem="3k4-O2-jXd" secondAttribute="bottom" constant="31" id="OYT-4b-C05"/>
+                            <constraint firstItem="NNg-x0-NLa" firstAttribute="centerX" secondItem="GXW-Ew-EsX" secondAttribute="centerX" id="lux-4Y-jKo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="pnN-bS-FLk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="214.5"/>
         </scene>
     </scenes>
 </document>
