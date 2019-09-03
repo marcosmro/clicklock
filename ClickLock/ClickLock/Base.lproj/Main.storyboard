@@ -685,11 +685,11 @@
             <objects>
                 <viewController storyboardIdentifier="AboutViewController" id="xSq-jw-fg3" customClass="AboutViewController" customModule="ClickLock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="GXW-Ew-EsX">
-                        <rect key="frame" x="0.0" y="0.0" width="326" height="155"/>
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="155"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3k4-O2-jXd">
-                                <rect key="frame" x="130" y="56" width="70" height="17"/>
+                                <rect key="frame" x="130" y="68" width="70" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Version 1.0" id="4UR-lv-a44">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -697,7 +697,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NNg-x0-NLa">
-                                <rect key="frame" x="112" y="81" width="103" height="29"/>
+                                <rect key="frame" x="130" y="93" width="118" height="29"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="ClickLock" id="SaD-6X-Vig">
                                     <font key="font" metaFont="system" size="24"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -705,28 +705,42 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dkg-PZ-9fr">
-                                <rect key="frame" x="89" y="12" width="148" height="13"/>
+                                <rect key="frame" x="64" y="12" width="148" height="13"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Copyright © 2019 MarcosMR" id="yxw-hU-Din">
                                     <font key="font" metaFont="system" size="10"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uKp-kx-Ots">
+                                <rect key="frame" x="39" y="63" width="74" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="3v2-h9-5Hc"/>
+                                    <constraint firstAttribute="width" constant="74" id="6FK-ap-ubF"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="mac-appicon-128" id="zgi-Kt-X8u"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="3k4-O2-jXd" firstAttribute="top" secondItem="NNg-x0-NLa" secondAttribute="bottom" constant="8" symbolic="YES" id="1bp-cY-wwJ"/>
-                            <constraint firstAttribute="trailing" secondItem="3k4-O2-jXd" secondAttribute="trailing" constant="128" id="BBy-k2-BUT"/>
-                            <constraint firstItem="NNg-x0-NLa" firstAttribute="top" secondItem="GXW-Ew-EsX" secondAttribute="top" constant="45" id="F55-TH-KEX"/>
-                            <constraint firstItem="NNg-x0-NLa" firstAttribute="centerX" secondItem="dkg-PZ-9fr" secondAttribute="centerX" id="Inp-k2-iZB"/>
-                            <constraint firstItem="dkg-PZ-9fr" firstAttribute="top" secondItem="3k4-O2-jXd" secondAttribute="bottom" constant="31" id="OYT-4b-C05"/>
+                            <constraint firstItem="dkg-PZ-9fr" firstAttribute="top" secondItem="uKp-kx-Ots" secondAttribute="bottom" constant="38" id="45e-S6-bgV"/>
+                            <constraint firstAttribute="trailing" secondItem="3k4-O2-jXd" secondAttribute="trailing" constant="77" id="BBy-k2-BUT"/>
+                            <constraint firstItem="NNg-x0-NLa" firstAttribute="top" secondItem="GXW-Ew-EsX" secondAttribute="top" constant="33" id="F55-TH-KEX"/>
+                            <constraint firstItem="NNg-x0-NLa" firstAttribute="centerX" secondItem="dkg-PZ-9fr" secondAttribute="centerX" constant="51.5" id="Inp-k2-iZB"/>
+                            <constraint firstItem="3k4-O2-jXd" firstAttribute="leading" secondItem="uKp-kx-Ots" secondAttribute="trailing" constant="19" id="KFa-ky-3kI"/>
+                            <constraint firstItem="dkg-PZ-9fr" firstAttribute="top" secondItem="3k4-O2-jXd" secondAttribute="bottom" constant="43" id="OYT-4b-C05"/>
                             <constraint firstItem="3k4-O2-jXd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GXW-Ew-EsX" secondAttribute="leading" constant="20" symbolic="YES" id="g1C-uC-lsf"/>
-                            <constraint firstItem="NNg-x0-NLa" firstAttribute="centerX" secondItem="GXW-Ew-EsX" secondAttribute="centerX" id="lux-4Y-jKo"/>
+                            <constraint firstItem="3k4-O2-jXd" firstAttribute="leading" secondItem="NNg-x0-NLa" secondAttribute="leading" id="j4D-8B-ki8"/>
+                            <constraint firstItem="NNg-x0-NLa" firstAttribute="centerX" secondItem="GXW-Ew-EsX" secondAttribute="centerX" constant="51.5" id="lux-4Y-jKo"/>
                         </constraints>
                     </view>
                 </viewController>
                 <customObject id="pnN-bS-FLk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100" y="214.5"/>
+            <point key="canvasLocation" x="74.5" y="214.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mac-appicon-128" width="128" height="128"/>
+    </resources>
 </document>
